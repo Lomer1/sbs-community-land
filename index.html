@@ -5,21 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" href="pic/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="pic/favicon.png">
-<title>SBS — Весь велосипедный сезон на одной стене</title>
-<meta name="description" content="Настенные системы SBS для хранения велосипеда и экипировки: велостанция и вешалка. Заказ через Telegram — sbscommunity.ru">
+<title>Настенная велостанция SBS — хранение велосипеда и экипировки</title>
+<meta name="description" content="Настенная велостанция и вешалка для экипировки SBS: сталь 3 мм, нагрузка до 15 кг. Заказ в Telegram — доставка по России.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://sbscommunity.ru/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="SBS Community">
-<meta property="og:title" content="SBS — Весь велосипедный сезон на одной стене">
-<meta property="og:description" content="Настенные системы SBS для хранения велосипеда и экипировки: велостанция и вешалка. Заказ через Telegram — sbscommunity.ru">
+<meta property="og:title" content="Настенная велостанция SBS — хранение велосипеда и экипировки">
+<meta property="og:description" content="Настенная велостанция и вешалка для экипировки SBS: сталь 3 мм, нагрузка до 15 кг. Заказ в Telegram — доставка по России.">
 <meta property="og:url" content="https://sbscommunity.ru/">
 <meta property="og:image" content="https://sbscommunity.ru/pic/hero.jpg">
 <meta property="og:image:alt" content="Велосипед, шлем и обувь на настенной станции SBS">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SBS — Весь велосипедный сезон на одной стене">
-<meta name="twitter:description" content="Настенные системы SBS для хранения велосипеда и экипировки: велостанция и вешалка.">
+<meta name="twitter:title" content="Настенная велостанция SBS — хранение велосипеда и экипировки">
+<meta name="twitter:description" content="Настенная велостанция и вешалка для экипировки SBS: сталь 3 мм, нагрузка до 15 кг. Заказ в Telegram — доставка по России.">
 <meta name="twitter:image" content="https://sbscommunity.ru/pic/hero.jpg">
 <style>
 :root{--bg:#fff;--fg:#0e0e0e;--mut:#8a8a8a;--line:#e6e6e6;--chip:#f1f1f1;--ph:#c9bfb2;--ph2:#a89c8d;--btn-off:#d4d4d4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -96,12 +96,15 @@ footer{border-top:1px solid var(--line);padding:40px 0 24px}
 .gallery-marquee{overflow:hidden}
 .gallery-track{display:flex;width:max-content;padding-left:24px;animation:gallery-scroll 45s linear infinite;will-change:transform}
 .gallery-set{display:flex;gap:24px;padding-right:24px}
-.gallery-set img{flex:0 0 auto;display:block;width:calc((min(1180px,100vw) - 72px) / 2);aspect-ratio:1/1;object-fit:cover;border-radius:24px;pointer-events:none}
+.gallery-set picture{flex:0 0 auto;display:block;width:calc((min(1180px,100vw) - 72px) / 2)}
+.gallery-set img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:24px;pointer-events:none}
+.stage .frame picture,.wrap.specs>picture{display:block;width:100%;height:100%}
+.slide picture{display:block;width:100%;height:100%}
 @keyframes gallery-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.gallery-track{animation:none;flex-wrap:wrap;width:auto;max-width:1180px;margin:0 auto;padding:0 24px;justify-content:center}.gallery-set[aria-hidden="true"]{display:none}.gallery-set{padding-right:0;flex-wrap:wrap;justify-content:center}}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .flogo{filter:invert(1)}}
 :root[data-theme="dark"] .flogo{filter:invert(1)}
-@media(max-width:820px){.img-hero{aspect-ratio:4/3;border-radius:24px}.gallery-track{animation-duration:32s}.gallery-set{gap:16px;padding-right:16px}.gallery-set img{width:calc(100vw - 48px)}.img-sq,.img-card{border-radius:24px}}
+@media(max-width:820px){.img-hero{aspect-ratio:4/3;border-radius:24px}.gallery-track{animation-duration:32s}.gallery-set{gap:16px;padding-right:16px}.gallery-set picture{width:calc(100vw - 48px)}.img-sq,.img-card{border-radius:24px}}
 
 header{background:transparent}
 :root{--chip-t:rgba(241,241,241,.55)}
@@ -234,7 +237,10 @@ body.lb-lock{overflow:hidden}
       "name": "SBS Community",
       "url": "https://sbscommunity.ru/",
       "email": "sbscommunityru@gmail.com",
-      "logo": "https://sbscommunity.ru/pic/logo-square.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://sbscommunity.ru/pic/logo-square.png"
+      },
       "sameAs": [
         "https://t.me/sbs_official"
       ],
@@ -254,21 +260,27 @@ body.lb-lock{overflow:hidden}
       "@type": "WebPage",
       "@id": "https://sbscommunity.ru/#webpage",
       "url": "https://sbscommunity.ru/",
-      "name": "SBS — Весь велосипедный сезон на одной стене",
+      "name": "Настенная велостанция SBS — хранение велосипеда и экипировки",
       "isPartOf": {
         "@id": "https://sbscommunity.ru/#website"
       },
       "about": {
         "@id": "https://sbscommunity.ru/#organization"
       },
-      "description": "Настенные системы SBS для хранения велосипеда и экипировки: велостанция и вешалка.",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://sbscommunity.ru/pic/hero.jpg"
+      },
+      "description": "Настенная велостанция и вешалка для экипировки SBS: сталь 3 мм, нагрузка до 15 кг. Заказ в Telegram — доставка по России.",
       "inLanguage": "ru-RU"
     },
     {
       "@type": "Product",
       "@id": "https://sbscommunity.ru/#product-velostanciya",
-      "name": "Велостанция",
-      "description": "Настенная станция SBS для хранения велосипеда, шлема, обуви и экипировки.",
+      "name": "Велостанция SBS",
+      "sku": "SBS-BIKE-STATION",
+      "category": "Настенные системы хранения велосипедов",
+      "description": "Настенная велостанция SBS для хранения велосипеда, шлема, обуви и экипировки. Конструкционная сталь 3 мм, нагрузка до 15 кг.",
       "image": [
         "https://sbscommunity.ru/pic/carousel-bike-1.jpg",
         "https://sbscommunity.ru/pic/carousel-bike-2.jpg",
@@ -280,12 +292,42 @@ body.lb-lock{overflow:hidden}
         "@type": "Brand",
         "name": "SBS"
       },
+      "material": "Конструкционная сталь 3 мм",
+      "color": "Чёрный",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Габариты (Ш × В × Г)",
+          "value": "350 × 350 × 350 мм"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Масса станции",
+          "value": "6.5 кг"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Максимальная нагрузка",
+          "value": "До 15 кг"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ширина руля",
+          "value": "До 720 мм"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Типы велосипедов",
+          "value": "Шоссе, гревел, фикс, МТБ"
+        }
+      ],
       "offers": {
         "@type": "Offer",
         "url": "https://sbscommunity.ru/#order",
         "priceCurrency": "RUB",
         "price": "9990",
         "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
         "seller": {
           "@id": "https://sbscommunity.ru/#organization"
         }
@@ -294,8 +336,10 @@ body.lb-lock{overflow:hidden}
     {
       "@type": "Product",
       "@id": "https://sbscommunity.ru/#product-veshalka",
-      "name": "Вешалка для экипировки",
-      "description": "Вешалка SBS для формы и велосипедной экипировки.",
+      "name": "Вешалка для экипировки SBS",
+      "sku": "SBS-GEAR-RACK",
+      "category": "Вешалки для велосипедной экипировки",
+      "description": "Вешалка SBS для формы и велосипедной экипировки. Совместима с настенной станцией SBS.",
       "image": [
         "https://sbscommunity.ru/pic/carousel-rack-1.jpg",
         "https://sbscommunity.ru/pic/carousel-rack-2.jpg",
@@ -307,12 +351,14 @@ body.lb-lock{overflow:hidden}
         "@type": "Brand",
         "name": "SBS"
       },
+      "color": "Чёрный",
       "offers": {
         "@type": "Offer",
         "url": "https://sbscommunity.ru/#order",
         "priceCurrency": "RUB",
         "price": "1990",
         "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
         "seller": {
           "@id": "https://sbscommunity.ru/#organization"
         }
@@ -367,7 +413,6 @@ body.lb-lock{overflow:hidden}
   ]
 }
 </script>
-</head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7D2PH7MV2"></script>
 <script>
@@ -377,6 +422,7 @@ body.lb-lock{overflow:hidden}
 
   gtag('config', 'G-J7D2PH7MV2');
 </script>
+</head>
 <body>
 <a class="logo" href="#top" aria-label="SBS Community"><img src="pic/logo.svg" alt="SBS Community"></a>
 <header>
@@ -389,7 +435,7 @@ body.lb-lock{overflow:hidden}
   <div class="hero-scroll" id="hs">
     <div class="stage">
       <div class="hero wrap" id="ht"><h1>Весь велосипедный сезон на одной стене</h1><p>Велосипед, шлем, обувь и форма в одном месте. Больше ничего не валяется в прихожей и не теряется перед выездом</p></div>
-      <div class="frame" id="fr"><img class="img-hero" src="pic/hero.jpg" alt="Велосипед, шлем и обувь на настенной станции SBS"></div>
+      <div class="frame" id="fr"><picture><source type="image/webp" srcset="pic/hero-1280.webp 1280w, pic/hero-1920.webp 1920w, pic/hero-2560.webp 2560w, pic/hero.webp 2880w" sizes="100vw"><img class="img-hero" src="pic/hero.jpg" srcset="pic/hero.jpg 2880w" sizes="100vw" alt="Настенная велостанция SBS с велосипедом, шлемом и обувью" fetchpriority="high"></picture></div>
     </div>
   </div>
 
@@ -397,14 +443,14 @@ body.lb-lock{overflow:hidden}
     <div class="gallery-marquee">
       <div class="gallery-track">
         <div class="gallery-set">
-          <img src="pic/gallery-1.jpg" alt="Галерея 1" loading="lazy">
-          <img src="pic/gallery-2.jpg" alt="Галерея 2" loading="lazy">
-          <img src="pic/gallery-3.jpg" alt="Галерея 3" loading="lazy">
+          <picture><source type="image/webp" srcset="pic/gallery-1-1000.webp 1000w, pic/gallery-1-1600.webp 1600w, pic/gallery-1.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img src="pic/gallery-1.jpg" srcset="pic/gallery-1.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="Настенная велостанция SBS, крупный план ложемента и перфорированного логотипа" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/webp" srcset="pic/gallery-2-1000.webp 1000w, pic/gallery-2-1600.webp 1600w, pic/gallery-2.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img src="pic/gallery-2.jpg" srcset="pic/gallery-2.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="Велосипед на настенной станции SBS: шлем сверху, обувь и аксессуары в нише" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/webp" srcset="pic/gallery-3-1000.webp 1000w, pic/gallery-3-1600.webp 1600w, pic/gallery-3.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img src="pic/gallery-3.jpg" srcset="pic/gallery-3.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="Настенная станция SBS в интерьере, вид с велосипедом и экипировкой" loading="lazy" decoding="async"></picture>
         </div>
         <div class="gallery-set" aria-hidden="true">
-          <img src="pic/gallery-1.jpg" alt="" loading="lazy">
-          <img src="pic/gallery-2.jpg" alt="" loading="lazy">
-          <img src="pic/gallery-3.jpg" alt="" loading="lazy">
+          <picture><source type="image/webp" srcset="pic/gallery-1-1000.webp 1000w, pic/gallery-1-1600.webp 1600w, pic/gallery-1.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img src="pic/gallery-1.jpg" srcset="pic/gallery-1.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/webp" srcset="pic/gallery-2-1000.webp 1000w, pic/gallery-2-1600.webp 1600w, pic/gallery-2.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img src="pic/gallery-2.jpg" srcset="pic/gallery-2.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/webp" srcset="pic/gallery-3-1000.webp 1000w, pic/gallery-3-1600.webp 1600w, pic/gallery-3.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img src="pic/gallery-3.jpg" srcset="pic/gallery-3.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="" loading="lazy" decoding="async"></picture>
         </div>
       </div>
     </div>
@@ -416,7 +462,7 @@ body.lb-lock{overflow:hidden}
   </section>
 
   <section class="wrap specs">
-    <img class="img-sq" src="pic/carousel-bike-1.jpg" alt="Настенная станция SBS, вид спереди" loading="lazy">
+    <picture><source type="image/webp" srcset="pic/carousel-bike-1-800.webp 800w, pic/carousel-bike-1-1400.webp 1400w, pic/carousel-bike-1.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img class="img-sq" src="pic/carousel-bike-1.jpg" srcset="pic/carousel-bike-1.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="Настенная велостанция SBS, вид спереди" loading="lazy" decoding="async"></picture>
     <div>
       <div class="row"><span>Габариты (Ш × В × Г)</span><span>350 × 350 × 350 мм</span></div>
       <div class="row"><span>Масса станции</span><span>6.5 кг</span></div>
@@ -436,7 +482,7 @@ body.lb-lock{overflow:hidden}
   <section class="wrap order">
     <article class="card">
       <div class="carousel">
-        <div class="track" tabindex="0" aria-label="Фото: Велостанция"><div class="slide"><img src="pic/carousel-bike-1.jpg" alt="Велостанция, фото 1" loading="lazy"></div><div class="slide"><img src="pic/carousel-bike-2.jpg" alt="Велостанция, фото 2" loading="lazy"></div><div class="slide"><img src="pic/carousel-bike-3.jpg" alt="Велостанция, фото 3" loading="lazy"></div><div class="slide"><img src="pic/carousel-bike-4.jpg" alt="Велостанция, фото 4" loading="lazy"></div><div class="slide"><img src="pic/carousel-bike-5.jpg" alt="Велостанция, фото 5" loading="lazy"></div></div>
+        <div class="track" tabindex="0" aria-label="Фото: Велостанция"><div class="slide"><picture><source type="image/webp" srcset="pic/carousel-bike-1-800.webp 800w, pic/carousel-bike-1-1400.webp 1400w, pic/carousel-bike-1.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img src="pic/carousel-bike-1.jpg" srcset="pic/carousel-bike-1.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="Настенная велостанция SBS под углом" loading="lazy" decoding="async"></picture></div><div class="slide"><picture><source type="image/webp" srcset="pic/carousel-bike-2-800.webp 800w, pic/carousel-bike-2-1400.webp 1400w, pic/carousel-bike-2.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img src="pic/carousel-bike-2.jpg" srcset="pic/carousel-bike-2.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="Настенная велостанция SBS, вид спереди" loading="lazy" decoding="async"></picture></div><div class="slide"><picture><source type="image/webp" srcset="pic/carousel-bike-3-800.webp 800w, pic/carousel-bike-3-1400.webp 1400w, pic/carousel-bike-3.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img src="pic/carousel-bike-3.jpg" srcset="pic/carousel-bike-3.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="Велостанция SBS на стене с велосипедом, шлемом и обувью" loading="lazy" decoding="async"></picture></div><div class="slide"><picture><source type="image/webp" srcset="pic/carousel-bike-4-800.webp 800w, pic/carousel-bike-4-1400.webp 1400w, pic/carousel-bike-4.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img src="pic/carousel-bike-4.jpg" srcset="pic/carousel-bike-4.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="Велостанция SBS на стене, фронтальный ракурс" loading="lazy" decoding="async"></picture></div><div class="slide"><picture><source type="image/webp" srcset="pic/carousel-bike-5-800.webp 800w, pic/carousel-bike-5-1400.webp 1400w, pic/carousel-bike-5.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img src="pic/carousel-bike-5.jpg" srcset="pic/carousel-bike-5.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="Настенная велостанция SBS, дополнительный ракурс" loading="lazy" decoding="async"></picture></div></div>
         <button type="button" class="nav prev" aria-label="Назад">&#8249;</button>
         <button type="button" class="nav next" aria-label="Вперёд">&#8250;</button>
         <div class="dots"></div>
@@ -449,7 +495,7 @@ body.lb-lock{overflow:hidden}
     </article>
     <article class="card">
       <div class="carousel">
-        <div class="track" tabindex="0" aria-label="Фото: Вешалка для экипировки"><div class="slide"><img src="pic/carousel-rack-1.jpg" alt="Вешалка для экипировки, фото 1" loading="lazy"></div><div class="slide"><img src="pic/carousel-rack-2.jpg" alt="Вешалка для экипировки, фото 2" loading="lazy"></div><div class="slide"><img src="pic/carousel-rack-3.jpg" alt="Вешалка для экипировки, фото 3" loading="lazy"></div><div class="slide"><img src="pic/carousel-rack-4.jpg" alt="Вешалка для экипировки, фото 4" loading="lazy"></div><div class="slide"><img src="pic/carousel-rack-5.jpg" alt="Вешалка для экипировки, фото 5" loading="lazy"></div></div>
+        <div class="track" tabindex="0" aria-label="Фото: Вешалка для экипировки"><div class="slide"><picture><source type="image/webp" srcset="pic/carousel-rack-1-800.webp 800w, pic/carousel-rack-1-1400.webp 1400w, pic/carousel-rack-1.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img src="pic/carousel-rack-1.jpg" srcset="pic/carousel-rack-1.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="Вешалка для экипировки SBS, вид спереди" loading="lazy" decoding="async"></picture></div><div class="slide"><picture><source type="image/webp" srcset="pic/carousel-rack-2-800.webp 800w, pic/carousel-rack-2-1400.webp 1400w, pic/carousel-rack-2.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img src="pic/carousel-rack-2.jpg" srcset="pic/carousel-rack-2.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="Вешалка для экипировки SBS, крупный план крючков" loading="lazy" decoding="async"></picture></div><div class="slide"><picture><source type="image/webp" srcset="pic/carousel-rack-3-800.webp 800w, pic/carousel-rack-3-1400.webp 1400w, pic/carousel-rack-3.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img src="pic/carousel-rack-3.jpg" srcset="pic/carousel-rack-3.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="Вешалка SBS на станции, вид под углом" loading="lazy" decoding="async"></picture></div><div class="slide"><picture><source type="image/webp" srcset="pic/carousel-rack-4-800.webp 800w, pic/carousel-rack-4-1400.webp 1400w, pic/carousel-rack-4.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img src="pic/carousel-rack-4.jpg" srcset="pic/carousel-rack-4.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="Вешалка для экипировки SBS в сборе" loading="lazy" decoding="async"></picture></div><div class="slide"><picture><source type="image/webp" srcset="pic/carousel-rack-5-800.webp 800w, pic/carousel-rack-5-1400.webp 1400w, pic/carousel-rack-5.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw"><img src="pic/carousel-rack-5.jpg" srcset="pic/carousel-rack-5.jpg 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="Вешалка для экипировки SBS, дополнительный ракурс" loading="lazy" decoding="async"></picture></div></div>
         <button type="button" class="nav prev" aria-label="Назад">&#8249;</button>
         <button type="button" class="nav next" aria-label="Вперёд">&#8250;</button>
         <div class="dots"></div>
@@ -551,7 +597,7 @@ document.querySelectorAll('.carousel').forEach(c=>{
     [...dotsEl.children].forEach((d,i)=>d.classList.toggle('on',i===idx));
   }
   function open(list,start){
-    urls=list.map(x=>x.src);alts=list.map(x=>x.alt||'');
+    urls=list.map(x=>x.currentSrc||x.src);alts=list.map(x=>x.alt||'');
     idx=start;dotsEl.innerHTML='';
     urls.forEach(()=>dotsEl.appendChild(document.createElement('i')));
     lb.hidden=false;lb.classList.add('open');document.body.classList.add('lb-lock');
